@@ -12,7 +12,7 @@ RUN yum -y update \
   cmake \
   rsync \
   tar \
-  python \
+  python38 \
   vim \
  && yum clean all
 

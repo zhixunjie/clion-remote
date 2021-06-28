@@ -13,9 +13,14 @@
 
 FROM centos:7
 
+# 替换镜像地址(arm64)
+RUN yum install wget \
+    && wget -O /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-7.repo \
+    && yum clean all \
+    && yum makecache
 
-RUN yum -y update \
- && yum -y install openssh-server \
+# 安装软件
+RUN yum -y install openssh-server \
   make \
   build-essential \
   gcc \
@@ -26,6 +31,7 @@ RUN yum -y update \
   rsync \
   tar \
   python \
+  vim \
  && yum clean all
 
 

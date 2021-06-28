@@ -12,7 +12,7 @@ docker container exec -it clion_remote_env_centos7 /bin/sh
 docker stop clion_remote_env_centos7
 
 
-# ubuntu 18.04
+# ubuntu 20.04
 # build
 docker build -t clion/remote-cpp-env:0.5 -f Dockerfile.remote-cpp-env .
 # run
